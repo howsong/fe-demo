@@ -4,8 +4,8 @@ import '@@/core/devScripts';
 import { plugin } from './core/plugin';
 import './core/pluginRegister';
 import { createHistory } from './core/history';
-import { ApplyPluginsType } from '/Users/haosen/Desktop/demos/umi-demo/node_modules/@umijs/runtime';
-import { renderClient } from '/Users/haosen/Desktop/demos/umi-demo/node_modules/@umijs/renderer-react/dist/index.js';
+import { ApplyPluginsType } from '/Users/haosen/Desktop/fe-demo/apps/umi-demo/node_modules/@umijs/runtime';
+import { renderClient } from '/Users/haosen/Desktop/fe-demo/apps/umi-demo/node_modules/@umijs/renderer-react/dist/index.js';
 import { getRoutes } from './core/routes';
 
 

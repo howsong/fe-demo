@@ -1,3 +1,3 @@
 // @ts-nocheck
 // @ts-ignore
-export { Helmet } from '/Users/haosen/Desktop/demos/umi-demo/node_modules/react-helmet';
+export { Helmet } from '/Users/haosen/Desktop/fe-demo/apps/umi-demo/node_modules/react-helmet';

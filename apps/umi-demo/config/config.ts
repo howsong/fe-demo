@@ -21,7 +21,7 @@ export default defineConfig({
       component: 'index',
       // wrappers: ['@/wrappers/auth'],
       routes: [
-        // { path: ROUTES.HOME, component: 'home', exact: true },
+        { path: ROUTES.LOGIN, component: 'login', exact: true },
         {
           path: ROUTES.ROOT,
           component: '@/layouts/index',

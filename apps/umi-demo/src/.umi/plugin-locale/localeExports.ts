@@ -3,11 +3,11 @@ import {
   createIntl,
   IntlShape,
   MessageDescriptor,
-} from '/Users/haosen/Desktop/demos/umi-demo/node_modules/react-intl';
+} from '/Users/haosen/Desktop/fe-demo/apps/umi-demo/node_modules/react-intl';
 import { ApplyPluginsType } from 'umi';
 import { event, LANG_CHANGE_EVENT } from './locale';
 // @ts-ignore
-import warning from '/Users/haosen/Desktop/demos/umi-demo/node_modules/warning/warning.js';
+import warning from '/Users/haosen/Desktop/fe-demo/apps/umi-demo/node_modules/warning/warning.js';
 
 import { plugin } from '../core/plugin';
 
@@ -34,7 +34,7 @@ export {
   defineMessages,
   injectIntl,
   useIntl,
-} from '/Users/haosen/Desktop/demos/umi-demo/node_modules/react-intl';
+} from '/Users/haosen/Desktop/fe-demo/apps/umi-demo/node_modules/react-intl';
 
 let g_intl: IntlShape;
 

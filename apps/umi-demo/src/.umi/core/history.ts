@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { createBrowserHistory } from '/Users/haosen/Desktop/demos/umi-demo/node_modules/@umijs/runtime';
+import { createBrowserHistory } from '/Users/haosen/Desktop/fe-demo/apps/umi-demo/node_modules/@umijs/runtime';
 
 let options = {
   "basename": "/"
