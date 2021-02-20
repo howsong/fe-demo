@@ -1,7 +1,7 @@
 export enum ROUTES {
   ROOT = '/',
-  LOGIN = 'LOGIN',
-  REGISTER = 'REGISTER',
+  LOGIN = '/login',
+  REGISTER = '/register',
   HOME = '/home',
   VISUAL = '/visual',
   ANTD = '/antd'

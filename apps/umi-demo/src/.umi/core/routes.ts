@@ -11,8 +11,13 @@ export function getRoutes() {
     "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__index' */'/Users/haosen/Desktop/fe-demo/apps/umi-demo/src/pages/index')}),
     "routes": [
       {
-        "path": "/LOGIN",
+        "path": "/login",
         "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__login' */'/Users/haosen/Desktop/fe-demo/apps/umi-demo/src/pages/login')}),
+        "exact": true
+      },
+      {
+        "path": "/register",
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__register' */'/Users/haosen/Desktop/fe-demo/apps/umi-demo/src/pages/register')}),
         "exact": true
       },
       {

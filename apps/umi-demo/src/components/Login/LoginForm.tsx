@@ -2,7 +2,9 @@ import React from 'react';
 import { Form, Input, Button } from 'antd';
 import request from 'umi-request'
 import styled from 'styled-components'
-import {LOGIN} from '@/contants/apis'
+import { LOGIN } from '@/contants/apis'
+import { ROUTES } from '@/contants/routes'
+import { useHistory } from 'umi'
 
 const FormWrapper = styled.div`
   width:300px;
@@ -14,11 +16,15 @@ const layout = {
   wrapperCol: { span: 18 }
 }
 export default function LoginForm (): React.FC {
+  const histtory = useHistory()
   const hanldeLogin = (values: any) => {
     console.log(values, '提交参数')
     request.post(LOGIN, { data: values }).then(res => {
       console.log(res)
     })
+  }
+  const jumpRegisterPage = () => {
+    histtory.push(ROUTES.REGISTER)
   }
   return (
     <FormWrapper >
@@ -32,6 +38,9 @@ export default function LoginForm (): React.FC {
         <Form.Item>
           <Button type="primary" htmlType="submit">登录</Button>
         </Form.Item>
+        <div>
+          <Button type="text" onClick={jumpRegisterPage}>注册</Button>
+        </div>
       </Form>
     </FormWrapper>
   )
