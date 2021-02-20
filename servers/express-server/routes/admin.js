@@ -18,6 +18,8 @@ router.post("/login", function (req, res, next) {
     if (result.length === 0) {
       res.json({ code: -1, message: "用户名或密码错误" });
     } else {
+      req.session.login = true
+      req.session.account = result[0].phone
       res.json({ code: 1, message: "登录成功" });
     }
   });
