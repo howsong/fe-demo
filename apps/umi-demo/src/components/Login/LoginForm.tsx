@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Form, Input, Button } from 'antd';
 import request from 'umi-request'
 import styled from 'styled-components'
@@ -18,7 +18,6 @@ const layout = {
 export default function LoginForm (): React.FC {
   const histtory = useHistory()
   const hanldeLogin = (values: any) => {
-    console.log(values, '提交参数')
     request.post(LOGIN, { data: values }).then(res => {
       console.log(res)
     })

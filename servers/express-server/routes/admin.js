@@ -26,6 +26,15 @@ router.post("/login", function (req, res, next) {
 // 注册
 router.post("/register", function (req, res, next) {
   const sql = "SELECT * FROM user WHERE phone = " + req.body.account;
+  const insertSql =
+    "INSERT INTO user (phone, password, nickname) VALUES (" +
+    req.body.account +
+    ", " +
+    req.body.password +
+    ", " +
+    (req.body.nickname || null) +
+    ")";
+
   db.query(sql, (err, result) => {
     if (err) {
       res.json({
@@ -35,9 +44,6 @@ router.post("/register", function (req, res, next) {
       return;
     }
     if (result.length === 0) {
-      const insertSql = `INSERT user (phone,password) VALUES (${
-        (req.body.account, req.body.password)
-      })`;
       db.query(insertSql, (err, result) => {
         if (err) {
           res.json({
@@ -47,8 +53,9 @@ router.post("/register", function (req, res, next) {
           });
           return;
         }
+        console.log(result);
+        res.json({ code: 1, message: "注册成功" });
       });
-      res.json({ code: 1, message: "注册成功" });
     } else {
       res.json({ code: -1, message: "该账号已注册" });
     }
