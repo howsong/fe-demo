@@ -1,12 +1,26 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <template v-for="(item, index) in pageLinks">
+        <router-link :key="item.path" :to="item.path">
+          {{ item.name }}
+        </router-link>
+        <template v-if="index !== pageLinks.length - 1"> | </template>
+      </template>
     </div>
     <router-view />
   </div>
 </template>
+<script>
+import { pageLinks } from "@/constants/route";
+export default {
+  data: () => {
+    return {
+      pageLinks: pageLinks
+    };
+  }
+};
+</script>
 
 <style>
 #app {

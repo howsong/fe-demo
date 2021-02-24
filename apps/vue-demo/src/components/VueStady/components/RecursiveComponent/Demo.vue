@@ -1,19 +1,17 @@
 <template>
-  <div class="home">
-    <VueStady/>
-  </div>
+  <RecursiveComponent :data="recursiveData" />
 </template>
 
 <script>
-import VueStady from '@/components/VueStady/index.vue'
-
+import RecursiveComponent from "./index.vue";
 export default {
-  components:{
-    VueStady
+  name: "RecursiveDemo",
+  components: {
+    RecursiveComponent
   },
   data: () => {
     return {
-      treeData: [
+      recursiveData: [
         {
           label: "TTTTT",
           value: "001",
@@ -26,7 +24,13 @@ export default {
         { label: "XXXXXXXX", value: "006" }
       ]
     };
-  },
-  name: "Home",
+  }
 };
 </script>
+<style lang="less" scoped>
+.nav_item_wrapper {
+  text-align: left;
+  margin-top: 10px;
+  background-color: orange;
+}
+</style>
